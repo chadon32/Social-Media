@@ -50,6 +50,7 @@ const isEmail = (email) => {
   exports.reduceUserDetails = (data) => {
     let userDetails = {};
   
+    //remove white space .trim 
     if (!isEmpty(data.bio.trim())) userDetails.bio = data.bio;
     if (!isEmpty(data.website.trim())) {
       // https://website.com
@@ -61,3 +62,5 @@ const isEmail = (email) => {
   
     return userDetails;
   };
+
+ 
